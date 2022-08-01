@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Beating_Heart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="S6n-fP-gTr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter BPM" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mkt-sP-e6b">
+                                <rect key="frame" x="107" y="473" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7dS-Sx-gIU"/>
+                                    <constraint firstAttribute="width" constant="200" id="8zd-c7-6TU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="DwT-Ra-dum">
+                                <rect key="frame" x="105" y="533" width="204" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8gd-Q4-LXl"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderUsed:" destination="BYZ-38-t0r" eventType="valueChanged" id="xEo-FC-S4G"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3cF-hP-ss3">
+                                <rect key="frame" x="52.5" y="821" width="309" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tbH-SL-4hX">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleIrregular:" destination="BYZ-38-t0r" eventType="valueChanged" id="XxL-6E-qVK"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Irregular Rhythm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQt-hs-pT2">
+                                        <rect key="frame" x="59" y="0.0" width="250" height="31"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="xXj-fN-KW1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart 10" translatesAutoresizingMaskIntoConstraints="NO" id="YIL-Lt-l4w">
+                                <rect key="frame" x="32" y="54" width="350" height="409"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="LPt-Ck-ykL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZW-is-Njy">
+                                <rect key="frame" x="32" y="54" width="350" height="409"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="3pY-yG-azU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="heartButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S1S-V3-A1R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YIL-Lt-l4w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ANj-b7-9vX"/>
+                            <constraint firstItem="DwT-Ra-dum" firstAttribute="top" secondItem="mkt-sP-e6b" secondAttribute="bottom" constant="10" id="Cu7-Oe-myM"/>
+                            <constraint firstAttribute="trailing" secondItem="S6n-fP-gTr" secondAttribute="trailing" id="CyM-8b-SKQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3cF-hP-ss3" secondAttribute="bottom" constant="10" id="DNp-0f-0UL"/>
+                            <constraint firstItem="YIL-Lt-l4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OrB-Ky-GSI"/>
+                            <constraint firstAttribute="bottom" secondItem="S6n-fP-gTr" secondAttribute="bottom" id="WKO-qJ-Buk"/>
+                            <constraint firstItem="S6n-fP-gTr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wib-6x-DNZ"/>
+                            <constraint firstAttribute="bottom" secondItem="S6n-fP-gTr" secondAttribute="bottom" id="eSG-py-gTF"/>
+                            <constraint firstAttribute="trailing" secondItem="S6n-fP-gTr" secondAttribute="trailing" id="hw3-LL-EuW"/>
+                            <constraint firstItem="DwT-Ra-dum" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j2c-7w-vGK"/>
+                            <constraint firstItem="S6n-fP-gTr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j82-f9-6kM"/>
+                            <constraint firstItem="mkt-sP-e6b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lQs-Yd-fzW"/>
+                            <constraint firstItem="zZW-is-Njy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mr0-PS-ecb"/>
+                            <constraint firstItem="mkt-sP-e6b" firstAttribute="top" secondItem="YIL-Lt-l4w" secondAttribute="bottom" constant="10" id="pXw-J2-Ifv"/>
+                            <constraint firstItem="3cF-hP-ss3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u6z-HC-5Jz"/>
+                            <constraint firstItem="mkt-sP-e6b" firstAttribute="top" secondItem="zZW-is-Njy" secondAttribute="bottom" constant="10" id="uR8-xN-vyV"/>
+                            <constraint firstItem="mkt-sP-e6b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="uwR-bR-xpb"/>
+                            <constraint firstItem="S6n-fP-gTr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v51-Hs-ufF"/>
+                            <constraint firstItem="S6n-fP-gTr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="whd-cR-sD7"/>
+                            <constraint firstAttribute="bottom" secondItem="S6n-fP-gTr" secondAttribute="bottom" id="yVy-gp-cPF"/>
+                            <constraint firstItem="zZW-is-Njy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zl8-08-IQi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bpm" destination="mkt-sP-e6b" id="DTE-lk-W1K"/>
+                        <outlet property="heartButton" destination="zZW-is-Njy" id="VHv-bz-enD"/>
+                        <outlet property="heartImage" destination="YIL-Lt-l4w" id="jnb-DV-E1w"/>
+                        <outlet property="slider" destination="DwT-Ra-dum" id="cth-9h-ib6"/>
+                        <outlet property="toggleIrregular" destination="tbH-SL-4hX" id="aF7-Pi-yxD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="2100" height="1500"/>
+        <image name="heart 10" width="587" height="729"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
