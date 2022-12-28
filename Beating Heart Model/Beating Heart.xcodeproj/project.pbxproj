@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71432E66288322AE0034F041 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71432E65288322AD0034F041 /* GoogleService-Info.plist */; };
-		715A88EF287F4F8700F7AA93 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 715A88EE287F4F8700F7AA93 /* FirebaseAnalytics */; };
-		715A88F1287F4F8700F7AA93 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 715A88F0287F4F8700F7AA93 /* FirebaseDatabase */; };
-		715A88F3287F4F8700F7AA93 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 715A88F2287F4F8700F7AA93 /* FirebaseDatabaseSwift */; };
 		71CFFE82287DF8770054672D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CFFE81287DF8770054672D /* AppDelegate.swift */; };
 		71CFFE84287DF8770054672D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CFFE83287DF8770054672D /* SceneDelegate.swift */; };
 		71CFFE86287DF8770054672D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CFFE85287DF8770054672D /* ViewController.swift */; };
@@ -20,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		71432E65288322AD0034F041 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71CFFE7E287DF8770054672D /* Beating Heart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beating Heart.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CFFE81287DF8770054672D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CFFE83287DF8770054672D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,9 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				715A88F3287F4F8700F7AA93 /* FirebaseDatabaseSwift in Frameworks */,
-				715A88F1287F4F8700F7AA93 /* FirebaseDatabase in Frameworks */,
-				715A88EF287F4F8700F7AA93 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +62,6 @@
 				71CFFE87287DF8770054672D /* Main.storyboard */,
 				71CFFE8A287DF88F0054672D /* Assets.xcassets */,
 				71CFFE8C287DF88F0054672D /* LaunchScreen.storyboard */,
-				71432E65288322AD0034F041 /* GoogleService-Info.plist */,
 				71CFFE8F287DF88F0054672D /* Info.plist */,
 			);
 			path = "Beating Heart Model";
@@ -93,9 +84,6 @@
 			);
 			name = "Beating Heart";
 			packageProductDependencies = (
-				715A88EE287F4F8700F7AA93 /* FirebaseAnalytics */,
-				715A88F0287F4F8700F7AA93 /* FirebaseDatabase */,
-				715A88F2287F4F8700F7AA93 /* FirebaseDatabaseSwift */,
 			);
 			productName = "Beating Heart Model";
 			productReference = 71CFFE7E287DF8770054672D /* Beating Heart.app */;
@@ -126,8 +114,6 @@
 			);
 			mainGroup = 71CFFE75287DF8770054672D;
 			packageReferences = (
-				715A88ED287F4F8700F7AA93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				715A88F4287F6A2900F7AA93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 71CFFE7F287DF8770054672D /* Products */;
 			projectDirPath = "";
@@ -144,7 +130,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				71CFFE8E287DF88F0054672D /* LaunchScreen.storyboard in Resources */,
-				71432E66288322AE0034F041 /* GoogleService-Info.plist in Resources */,
 				71CFFE8B287DF88F0054672D /* Assets.xcassets in Resources */,
 				71CFFE89287DF8770054672D /* Main.storyboard in Resources */,
 			);
@@ -379,43 +364,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		715A88ED287F4F8700F7AA93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-		715A88F4287F6A2900F7AA93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		715A88EE287F4F8700F7AA93 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 715A88ED287F4F8700F7AA93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		715A88F0287F4F8700F7AA93 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 715A88ED287F4F8700F7AA93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		715A88F2287F4F8700F7AA93 /* FirebaseDatabaseSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 715A88ED287F4F8700F7AA93 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabaseSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71CFFE76287DF8770054672D /* Project object */;
 }
