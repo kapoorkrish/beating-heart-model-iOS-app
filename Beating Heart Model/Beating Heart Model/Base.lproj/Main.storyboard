@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -56,13 +56,13 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart 10" translatesAutoresizingMaskIntoConstraints="NO" id="YIL-Lt-l4w">
-                                <rect key="frame" x="12.666666666666657" y="57" width="350" height="364"/>
+                                <rect key="frame" x="12.666666666666657" y="60" width="350" height="361"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="LPt-Ck-ykL"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZW-is-Njy">
-                                <rect key="frame" x="12.666666666666657" y="57" width="350" height="364"/>
+                                <rect key="frame" x="12.666666666666657" y="60" width="350" height="361"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="3pY-yG-azU"/>
                                 </constraints>
@@ -74,35 +74,11 @@
                                     <action selector="heartButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S1S-V3-A1R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5R-sO-JO2" userLabel="Shutdown Button">
-                                <rect key="frame" x="150" y="654" width="75" height="73.666666666666629"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="o5R-sO-JO2" secondAttribute="height" multiplier="1:1" id="NrM-Dn-k2V"/>
-                                    <constraint firstAttribute="height" constant="75" id="m1d-RM-duM"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="power.circle.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="shutdownButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDo-Cc-nUD"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="DwT-Ra-dum">
-                                <rect key="frame" x="85.666666666666686" y="501" width="204" height="11"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="8gd-Q4-LXl"/>
-                                    <constraint firstAttribute="height" constant="10" id="uug-He-otX"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="sliderUsed:" destination="BYZ-38-t0r" eventType="valueChanged" id="xEo-FC-S4G"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="YIL-Lt-l4w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ANj-b7-9vX"/>
-                            <constraint firstItem="DwT-Ra-dum" firstAttribute="top" secondItem="mkt-sP-e6b" secondAttribute="bottom" constant="20" id="Cu7-Oe-myM"/>
                             <constraint firstAttribute="trailing" secondItem="S6n-fP-gTr" secondAttribute="trailing" id="CyM-8b-SKQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3cF-hP-ss3" secondAttribute="bottom" constant="10" id="DNp-0f-0UL"/>
                             <constraint firstItem="YIL-Lt-l4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OrB-Ky-GSI"/>
@@ -110,14 +86,11 @@
                             <constraint firstItem="S6n-fP-gTr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wib-6x-DNZ"/>
                             <constraint firstAttribute="bottom" secondItem="S6n-fP-gTr" secondAttribute="bottom" id="eSG-py-gTF"/>
                             <constraint firstAttribute="trailing" secondItem="S6n-fP-gTr" secondAttribute="trailing" id="hw3-LL-EuW"/>
-                            <constraint firstItem="DwT-Ra-dum" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j2c-7w-vGK"/>
                             <constraint firstItem="S6n-fP-gTr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j82-f9-6kM"/>
                             <constraint firstItem="mkt-sP-e6b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lQs-Yd-fzW"/>
                             <constraint firstItem="zZW-is-Njy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mr0-PS-ecb"/>
                             <constraint firstItem="mkt-sP-e6b" firstAttribute="top" secondItem="YIL-Lt-l4w" secondAttribute="bottom" constant="10" id="pXw-J2-Ifv"/>
-                            <constraint firstItem="3cF-hP-ss3" firstAttribute="top" secondItem="o5R-sO-JO2" secondAttribute="bottom" constant="10" id="tXH-Ul-hlh"/>
                             <constraint firstItem="3cF-hP-ss3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u6z-HC-5Jz"/>
-                            <constraint firstItem="o5R-sO-JO2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uCI-yc-5jY"/>
                             <constraint firstItem="mkt-sP-e6b" firstAttribute="top" secondItem="zZW-is-Njy" secondAttribute="bottom" constant="10" id="uR8-xN-vyV"/>
                             <constraint firstItem="mkt-sP-e6b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="uwR-bR-xpb"/>
                             <constraint firstItem="S6n-fP-gTr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v51-Hs-ufF"/>
@@ -130,8 +103,6 @@
                         <outlet property="bpm" destination="mkt-sP-e6b" id="DTE-lk-W1K"/>
                         <outlet property="heartButton" destination="zZW-is-Njy" id="VHv-bz-enD"/>
                         <outlet property="heartImage" destination="YIL-Lt-l4w" id="jnb-DV-E1w"/>
-                        <outlet property="shutdownButton" destination="o5R-sO-JO2" id="lua-cC-Kgz"/>
-                        <outlet property="slider" destination="DwT-Ra-dum" id="cth-9h-ib6"/>
                         <outlet property="toggleIrregular" destination="tbH-SL-4hX" id="aF7-Pi-yxD"/>
                     </connections>
                 </viewController>
@@ -143,12 +114,8 @@
     <resources>
         <image name="background" width="2100" height="1500"/>
         <image name="heart 10" width="587" height="729"/>
-        <image name="power.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

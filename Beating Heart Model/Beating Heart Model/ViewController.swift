@@ -13,15 +13,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var heartButton: UIButton!
     @IBOutlet weak var bpm: UITextField!
     @IBOutlet weak var toggleIrregular: UISwitch!
-    @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var shutdownButton: UIButton!
     
     let heart_color_animation = [UIImage(named: "heart 1")!, UIImage(named: "heart 2")!, UIImage(named: "heart 3")!, UIImage(named: "heart 4")!, UIImage(named: "heart 5")!, UIImage(named: "heart 6")!, UIImage(named: "heart 7")!, UIImage(named: "heart 8")!, UIImage(named: "heart 9")!, UIImage(named: "heart 10")!]
     
     var data: [String : Any] = [
         "bpm": 0,
-        "condition": "Regular",
-        "shutdown": "No"
+        "condition": "Regular"
     ]
     
     var condition = "Regular"
@@ -36,34 +33,12 @@ class ViewController: UIViewController {
         
         sendData(bpm: 0, condition: condition)
     }
-
-    @IBAction func sliderUsed(_ sender: Any) {
-        
-        bpmVal = Int(bpm.text ?? "0") ?? 0
-        bpmVal = Int(slider.value)
-        bpm.text = "\(bpmVal)"
-        
-        if (bpmVal > 0 && bpmVal <= 200) {
-            if heartImage.image == UIImage(named: "heart 1") {
-                heartImage.animationDuration = 0.5
-                heartImage.animationRepeatCount = 1
-                heartImage.startAnimating()
-                heartImage.image = UIImage(named: "heart 10")
-            }
-            sendData(bpm: bpmVal, condition: condition)
-
-        }
-        else {
-            heartImage.image = UIImage(named: "heart 1")
-        }
-    }
     
     @IBAction func heartButtonClicked(_ sender: Any) {
         
         if bpm.isFirstResponder && bpm.hasText {
             bpm.resignFirstResponder()
             bpmVal = Int(bpm.text!)!
-            slider.value = Float(bpmVal)
             
             if (bpmVal > 0 && bpmVal <= 200) {
                 if heartImage.image == UIImage(named: "heart 1") {
@@ -90,15 +65,8 @@ class ViewController: UIViewController {
         sendData(bpm: bpmVal, condition: condition)
     }
     
-    
-    @IBAction func shutdownButtonClicked(_ sender: Any) {
-        shutdownButton.setBackgroundImage(UIImage(systemName: "power.circle"), for: .normal)
-        
-        sendData(bpm: 0, condition: "Regular", shutdown: "Yes")
-    }
-    
     func api_post() {
-        let url = URL(string: "http://192.168.1.51:5000/database")
+        let url = URL(string: "http://192.168.1.56/heart")
         var request = URLRequest(url: url!)
         
         request.httpMethod = "POST"
@@ -118,16 +86,13 @@ class ViewController: UIViewController {
         task.resume()
     }
     
-    func sendData(bpm: Int, condition: String, shutdown: String? = "No") {
+    func sendData(bpm: Int, condition: String) {
         data["bpm"] = bpm
         data["condition"] = condition
-        data["shutdown"] = shutdown
+        
         api_post()
         
         print("BPM:", bpm)
         print("Condition:", condition)
-        if shutdown == "Yes" {
-            print("Shutting down")
-        }
     }
 }
